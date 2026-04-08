@@ -1,0 +1,140 @@
+/* custom property */
+:root {
+	--accent-color: #800000;  
+	--gradient-color: #f6bb73;
+}
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* default styles */
+body {
+	font-family: Arial, Helvetica, SansSerif;
+	width: 80%;               
+	max-width: 1024px;        
+	margin: auto;
+	border: 2px solid var(--accent-color);
+	font-size: calc(90% + .2vw); 
+	line-height: 1.5;           
+}
+a:hover, a:focus{
+	font-style: italic;
+	color: var(--accent-color);
+}
+h1, h2, h3, p, ul {
+	padding: .25em 0;
+}
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 130%;
+	color: var(--accent-color);
+}
+h3 {
+	font-size: 105%;
+}
+ul {
+	margin-left: 2em;
+}
+
+/* the styles for the header */
+header {
+	border-bottom: 2px solid var(--accent-color);
+	background-image: linear-gradient(
+	    30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%); 
+	line-height: 1.2; /* [cite: 75] */
+	& h2 {
+		font-size: 175%;
+		padding: .5em 0 0 0;
+	}
+	& h3 {
+		font-size: 130%;
+		font-style: italic;
+		padding-bottom: 1em;
+	}
+	& img {
+		float: left;
+		margin: .75em 1em;
+		/* Scalable Logo [cite: 77, 80] */
+		width: 100%;
+		min-width: 40px;
+		max-width: 80px;
+	}
+}
+
+/* the styles for the main content */
+main {
+	padding: 0 1em 1em;
+	display: flex; /* [cite: 56] */
+	
+	& h1 {
+		/* border-top and border-bottom declarations removed [cite: 67] */
+	}
+
+	aside {
+		flex-basis: 25%; 
+		
+		/* Scalable guest speaker images [cite: 79, 80] */
+		& img {
+			width: 100%;
+			min-width: 40px;
+			max-width: 75px;
+		}
+	}
+	section {
+		flex-basis: 75%; /* [cite: 60] */
+
+		
+		& img {
+			float: right;
+			margin: 0 0 10px 10px;
+			
+			width: 100%;
+			min-width: 100px;
+			max-width: 250px;
+		}
+	}
+	& blockquote {
+		font-style: italic;
+		padding-left: 1em;
+	}
+
+	/* CSS for the featured speaker [cite: 64, 66] */
+	.featured {
+		border-top: 2px solid var(--accent-color);
+		border-bottom: 2px solid var(--accent-color);
+	}
+}
+
+/* the styles for the footer */
+footer {
+	background-color: var(--accent-color);
+	& p {
+		text-align: center;
+		color: white;
+		padding: 1em 0;
+	}
+}
+
+/* Exercise 6-2: Speaker Page styles [cite: 126-130] */
+.speaker {
+	& h1 {
+		color: var(--accent-color);
+	}
+	& h2 {
+		color: black;
+	}
+	& p {
+		padding: .5em 0;
+	}
+}
+
+/* CSS class */
+.large {
+	font-size: 125%;
+}
